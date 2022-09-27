@@ -1,0 +1,56 @@
+<!-- [ navigation menu ] start -->
+<nav class="pcoded-navbar">
+    <div class="navbar-wrapper">
+        <div class="navbar-brand header-logo">
+            <a href="/" class="b-brand">
+                <div class="m-t-45">
+                    <img class="feather" width= "200px" src="https://i.postimg.cc/Qtp194FB/IBMLogo.gif">
+                </div>
+            </a>
+            <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+        </div>
+        <div class="navbar-content scroll-div">
+            <ul class="nav pcoded-inner-navbar">
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Navigation</label>
+                </li>
+                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" 
+                    class="nav-item {% if 'index' in segment %} active {% endif %}">
+                    <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span
+                            class="pcoded-mtext">Dashboard</span></a>
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Checklist</label>
+                </li>
+                <li data-username="form elements advance componant validation masking wizard picker select"
+                    class="nav-item {% if 'create-request' in segment %} active {% endif %}">
+                    <a href="/create-request.html" class="nav-link ">
+                        <span class="pcoded-micon">
+                            <i class="feather icon-file-text"></i>
+                        </span>
+                        <span class="pcoded-mtext">Create Request</span>
+                    </a>
+                </li>
+
+                <li class="nav-item pcoded-menu-caption">
+                    <label>More Resources</label>
+                </li>
+
+                <li data-username="Disabled Menu" class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Logout</span>
+                    </a>
+                </li>
+
+                <li data-username="Support Page" class="nav-item ">
+                    <a target="_blank" href="https://appseed.us/support" class="nav-link">
+                        <span class="pcoded-micon">
+                            <i class="feather icon-headphones"></i>
+                        </span>
+                        <span class="pcoded-mtext">Support</span>
+                    </a>
+                </li>                
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- [ navigation menu ] end -->

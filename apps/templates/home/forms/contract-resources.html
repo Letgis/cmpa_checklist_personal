@@ -1,0 +1,111 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Forms {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">Checklist</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">Contract Information</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Contract Information</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Checklist Number</label>
+                                                            <input type="text" class="form-control" id= checklistNumberContractInfo" placeholder="123456" disabled>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Country</label>
+                                                            <input type="text" class="form-control" id="inputCountryDisabled" placeholder="Selected Country" disabled>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-md-6">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Number of Local IBMer's (Onshore)</label>
+                                                            <input type="text" class="form-control" id= checklistNumberContractInfo">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Number of ICA resources (Offshore)</label>
+                                                            <input type="text" class="form-control" id="inputCountryDisabled">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Number of SubK's</label>
+                                                            <input type="text" class="form-control" id="inputCountryDisabled">
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                                <div class="col-md-6">
+                                                </div>
+                                            </div>
+
+                                            <h5 class="mt-5">Total</h5>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" id= checklistNumberContractInfo">
+                                                            <small id="emailHelp" class="form-text text-muted">Number of Local IBMer's + Number of ICA resources + Number of SubK's</small>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary pull-right" onclick="location.href = '/contract-entitlement.html'">Next</button>
+                                        </div>
+                                   </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
