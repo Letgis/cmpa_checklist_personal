@@ -1,0 +1,179 @@
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %} {% block content %}
+
+<div class="pcoded-content">
+  <div class="pcoded-inner-content">
+    <div class="main-body">
+      <div class="page-wrapper">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <h5>Contract Information</h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Checklist Number</label>
+                        <input type="text" class="form-control" id=
+                        checklistNumberContractInfo" placeholder="123456"
+                        disabled>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Country</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inputCountryDisabled"
+                          placeholder="Selected Country"
+                          disabled
+                        />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-group">
+                        <label>Project Code/s (CLAIM Work#)</label>
+                        <input type="text" class="form-control" />
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1"
+                          >IPPF Forecasting Type</label
+                        >
+                        <select
+                          class="form-control"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option selected>Select</option>
+                          <option>By Resource</option>
+                          <option>By Category</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1"
+                          >Deferral / Amortization</label
+                        >
+                        <select
+                          class="form-control"
+                          id="exampleFormControlSelect1"
+                        >
+                          <option selected>Select</option>
+                          <option>POC</option>
+                          <option>T/T</option>
+                          <option>None</option>
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <h4 class="mt-5">CFTS</h4>
+                <hr />
+                <form class="form-inline">
+                  <div class="form-group mb-2">
+                    <label for="staticEmail2" class="sr-only"
+                      >Contract Number</label
+                    >
+                    <input
+                      type="text"
+                      readonly
+                      class="form-control-plaintext"
+                      id="staticContract"
+                      value="Contract Number"
+                    />
+                  </div>
+                  <div class="form-group mx-sm-3 mb-2">
+                    <label for="inputPassword2" class="sr-only">Contract</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="contractNumber"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary mb-2">
+                    Populate
+                  </button>
+                </form>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Customer Name</label>
+                        <input type="text" class="form-control" id=
+                        checklistNumberContractInfo">
+                        <small id="emailHelp" class="form-text text-muted"
+                          >Receives from CFTS</small
+                        >
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Contract TCV $</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inputCountryDisabled"
+                        />
+                        <small id="emailHelp" class="form-text text-muted"
+                          >Receives from CFTS</small
+                        >
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1"
+                          >Contract Length (Months)</label
+                        >
+                        <input type="text" class="form-control" id=
+                        checklistNumberContractInfo">
+                        <small id="emailHelp" class="form-text text-muted"
+                          >Receives from CFTS</small
+                        >
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Contract Type</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inputCountryDisabled"
+                        />
+                        <small id="emailHelp" class="form-text text-muted"
+                          >Receives from CFTS</small
+                        >
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <h4 class="mt-5">Annual TCV ($M)</h4>
+                <hr />
+                <div class="row">
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id=
+                        checklistNumberContractInfo">
+                        <small id="emailHelp" class="form-text text-muted"
+                          >Contract TCV / (Contract Length/Contract TCV)</small
+                        >
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock content %}
+
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}{% endblock javascripts %}
+</div>

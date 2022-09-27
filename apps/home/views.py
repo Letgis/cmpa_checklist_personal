@@ -4,6 +4,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import CMPAChecklist
+from django.shortcuts import render
+
 
 
 @login_required(login_url="/login/")
@@ -34,15 +36,14 @@ def pages(request):
 
         html_template = loader.get_template('home/page-404.html')
         return HttpResponse(html_template.render(context, request))
-
+    
     except:
         html_template = loader.get_template('home/page-500.html')
         return HttpResponse(html_template.render(context, request))
     
     
-def addrecord(request):
-    x = request.POST['location']
-    y = request.POST['supportNeeded']
-    cmpachecklist = CMPAChecklist(location=x, supportNeeded=y)
-    cmpachecklist.save()
-    return HttpResponseRedirect(reverse('resource-request'))
+
+
+def resource_request(request):
+	print(request.POST)
+	return render(request, "create-request.html")
