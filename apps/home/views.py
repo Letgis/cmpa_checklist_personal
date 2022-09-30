@@ -7,7 +7,6 @@ from .models import CMPAChecklist
 from django.shortcuts import render
 
 
-
 @login_required(login_url="/login/")
 def index(request):
     context = {'segment': 'index'}
@@ -36,14 +35,13 @@ def pages(request):
 
         html_template = loader.get_template('home/page-404.html')
         return HttpResponse(html_template.render(context, request))
-    
-    except:
+
+    except Exception as e:
+        print(e)
         html_template = loader.get_template('home/page-500.html')
         return HttpResponse(html_template.render(context, request))
-    
-    
 
 
-def resource_request(request):
-	print(request.POST)
-	return render(request, "create-request.html")
+def save_request(request):
+    print(request.POST)
+    return render(request, "home/create-request.html")

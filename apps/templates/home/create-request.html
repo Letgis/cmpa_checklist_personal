@@ -1,181 +1,154 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Create Request {% endblock %} 
-
 <!-- Specific CSS goes HERE -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}{% endblock stylesheets %} {% block content %}
 
-{% block content %}
-
-    <!-- [ Main Content ] start -->
+<!-- [ Main Content ] start -->
 <div class="pcoded-main-container">
-    <div class="pcoded-wrapper">
+  <div class="pcoded-wrapper">
+    <div>
+      <div id="multi-step-form-container">
+        <!-- Form Steps / Progress Bar -->
+        <ul
+          class="form-stepper form-stepper-horizontal text-center mx-auto pl-0"
+        >
+          <!-- Step 1 -->
+          <li
+            class="form-stepper-active text-center form-stepper-list"
+            step="1"
+          >
+            <a class="mx-2">
+              <span class="form-stepper-circle">
+                <span>1</span>
+              </span>
+              <div class="label">Resource Request</div>
+            </a>
+          </li>
 
-        <div>
-            <div id="multi-step-form-container">
+          <!-- Step 2 -->
+          <li
+            class="form-stepper-unfinished text-center form-stepper-list"
+            step="2"
+          >
+            <a class="mx-2">
+              <span class="form-stepper-circle text-muted">
+                <span>2</span>
+              </span>
+              <div class="label text-muted">Contract Information</div>
+            </a>
+          </li>
 
-                <!-- Form Steps / Progress Bar -->
-                <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
-                    <!-- Step 1 -->
-                    <li class="form-stepper-active text-center form-stepper-list" step="1">
-                        <a class="mx-2">
-                            <span class="form-stepper-circle">
-                                <span>1</span>
-                            </span>
-                            <div class="label">Resource Request</div>
-                        </a>
-                    </li>
+          <!-- Step 3 -->
+          <li
+            class="form-stepper-unfinished text-center form-stepper-list"
+            step="3"
+          >
+            <a class="mx-2">
+              <span class="form-stepper-circle text-muted">
+                <span>3</span>
+              </span>
+              <div class="label text-muted">Contract Billing</div>
+            </a>
+          </li>
 
-                    <!-- Step 2 -->
-                    <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
-                        <a class="mx-2">
-                            <span class="form-stepper-circle text-muted">
-                                <span>2</span>
-                            </span>
-                            <div class="label text-muted">Contract Information</div>
-                        </a>
-                    </li>
+          <!-- Step 4 -->
+          <li
+            class="form-stepper-unfinished text-center form-stepper-list"
+            step="4"
+          >
+            <a class="mx-2">
+              <span class="form-stepper-circle text-muted">
+                <span>4</span>
+              </span>
+              <div class="label text-muted">Contract Resources</div>
+            </a>
+          </li>
 
-                    <!-- Step 3 -->
-                    <li class="form-stepper-unfinished text-center form-stepper-list" step="3">
-                        <a class="mx-2">
-                            <span class="form-stepper-circle text-muted">
-                                <span>3</span>
-                            </span>
-                            <div class="label text-muted">Contract Billing</div>
-                        </a>
-                    </li>
+          <!-- Step 5 -->
+          <li
+            class="form-stepper-unfinished text-center form-stepper-list"
+            step="5"
+          >
+            <a class="mx-2">
+              <span class="form-stepper-circle text-muted">
+                <span>5</span>
+              </span>
+              <div class="label text-muted">Contract Entitlement</div>
+            </a>
+          </li>
 
-                    <!-- Step 4 -->
-                    <li class="form-stepper-unfinished text-center form-stepper-list" step="4">
-                        <a class="mx-2">
-                            <span class="form-stepper-circle text-muted">
-                                <span>4</span>
-                            </span>
-                            <div class="label text-muted">Contract Resources</div>
-                        </a>
-                    </li>
+          <!-- Step 5 -->
+          <li
+            class="form-stepper-unfinished text-center form-stepper-list"
+            step="6"
+          >
+            <a class="mx-2">
+              <span class="form-stepper-circle text-muted">
+                <span>6</span>
+              </span>
+              <div class="label text-muted">Activities</div>
+            </a>
+          </li>
+        </ul>
 
-                    <!-- Step 5 -->
-                    <li class="form-stepper-unfinished text-center form-stepper-list" step="5">
-                        <a class="mx-2">
-                            <span class="form-stepper-circle text-muted">
-                                <span>5</span>
-                            </span>
-                            <div class="label text-muted">Contract Entitlement</div>
-                        </a>
-                    </li>
-
-                    <!-- Step 5 -->
-                    <li class="form-stepper-unfinished text-center form-stepper-list" step="6">
-                        <a class="mx-2">
-                            <span class="form-stepper-circle text-muted">
-                                <span>6</span>
-                            </span>
-                            <div class="label text-muted">Activities</div>
-                        </a>
-                    </li>
-                </ul>
-
-                
-
-
-                <!-- Step Wise Form Content -->
-                <form id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data" method="POST">
-                    <!-- Step 1 Content -->
-                    
-                    <section id="step-1" class="form-step">
-                        <form action = "" method = "GET">
-                            <!-- Step 1 input fields -->
-                            <div class="mt-3">
-                                {% include 'home/1_resource-request.html' %}
-                            </div>
-
-                            <div class="mt-3 btn-group">
-                                <button class="button2 btn btn-outline-primary " type="submit">Save</button>
-                                <button class="button btn-navigate-form-step" type="button" step_number="2">Next</button>
-                            </div>
-                        </form>
-                    </section>
-
-
-                    <!-- Step 2 Content, default hidden on page load. -->
-                    <section id="step-2" class="form-step d-none">
-                        <!-- Step 2 input fields -->
-                        <div class="mt-3">
-                            {% include 'home/2_contract-info.html' %}
-                        </div>
-
-                        <div class="mt-3 btn-group">
-                            <button class="button btn-navigate-form-step" type="button" step_number="1">Prev</button>
-                            <button class="button2 btn btn-outline-primary " type="submit">Save</button>
-                            <button class="button btn-navigate-form-step" type="button" step_number="3">Next</button>
-                        </div>
-                    </section>
-
-
-                    <!-- Step 3 Content, default hidden on page load. -->
-                    <section id="step-3" class="form-step d-none">
-                        <!-- Step 3 input fields -->
-                        <div class="mt-3">
-                            {% include 'home/3_contract-billing.html' %}
-                        </div>
-                        <div class="mt-3">
-                            <button class="button btn-navigate-form-step" type="submit">Save</button>
-                            <button class="button btn-navigate-form-step" type="button" step_number="2">Prev</button>
-                            <button class="button btn-navigate-form-step" type="button" step_number="4">Next</button>
-                        </div>
-                    </section>
-
-
-                    <!-- Step 4 Content, default hidden on page load. -->
-                    <section id="step-4" class="form-step d-none">
-                        <!-- Step 4 input fields -->
-                        <div class="mt-3">
-                            {% include 'home/4_contract-resources.html' %}
-                        </div>
-
-                        <div class="mt-3">
-                            <button class="button btn-navigate-form-step" type="submit">Save</button>
-                            <button class="button btn-navigate-form-step" type="button" step_number="3">Prev</button>
-                            <button class="button btn-navigate-form-step" type="button" step_number="5">Next</button>
-                        </div>
-                    </section>
-
-
-                    <!-- Step 5 Content, default hidden on page load. -->
-                    <section id="step-5" class="form-step d-none">
-                        <!-- Step 5 input fields -->
-                        <div class="mt-3">
-                            {% include 'home/5_contract-entitlement.html' %}
-                        </div>
-                        <div class="mt-3">
-                            <button class="button btn-navigate-form-step" type="submit">Print</button>
-                            <button class="button btn-navigate-form-step" type="button" step_number="4">Prev</button>
-                            <button class="button btn-navigate-form-step" type="button" step_number="6">Next</button>
-                        </div>
-                    </section>
-
-
-                    <!-- Step 6 Content, default hidden on page load. -->
-                    <section id="step-6" class="form-step d-none">
-                        <!-- Step 5 input fields -->
-                        <div class="mt-3">
-                            {% include 'home/6_activities.html' %}
-                        <div class="mt-3">
-                            <button class="button btn-navigate-form-step" type="submit">Print</button>
-                            <button class="button btn-navigate-form-step" type="button" step_number="5">Prev</button>
-                            <button class="button btn-navigate-form-step" type="button" step_number="Finish">Finish</button>
-                        </div>
-                    </section>
-
-                </form>
-
+        <!-- Step Wise Form Content -->
+        <form
+          action="/save_request"
+          id="userAccountSetupForm"
+          name="userAccountSetupForm"
+          enctype="multipart/form-data"
+          method="POST"
+        >
+          {% csrf_token %}
+          <!-- Step 1 Content -->
+          <section id="step-1" class="form-step">
+            <!-- Step 1 input fields -->
+            <div class="mt-3">
+              {% include 'home/1_resource-request.html' %}
             </div>
+          </section>
 
-        </div>
-        
+          <!-- Step 2 Content, default hidden on page load. -->
+          <section id="step-2" class="form-step d-none">
+            <!-- Step 2 input fields -->
+            <div class="mt-3">
+              {% include 'home/2_contract-info.html' %}
+            </div>
+          </section>
+
+          <!-- Step 3 Content, default hidden on page load. -->
+          <section id="step-3" class="form-step d-none">
+            <!-- Step 3 input fields -->
+            <div class="mt-3">
+              {% include 'home/3_contract-billing.html' %}
+            </div>
+          </section>
+
+          <!-- Step 4 Content, default hidden on page load. -->
+          <section id="step-4" class="form-step d-none">
+            <!-- Step 4 input fields -->
+            <div class="mt-3">
+              {% include 'home/4_contract-resources.html' %}
+            </div>
+          </section>
+
+          <!-- Step 5 Content, default hidden on page load. -->
+          <section id="step-5" class="form-step d-none">
+            <!-- Step 5 input fields -->
+            <div class="mt-3">
+              {% include 'home/5_contract-entitlement.html' %}
+            </div>
+          </section>
+
+          <!-- Step 6 Content, default hidden on page load. -->
+          <section id="step-6" class="form-step d-none">
+            <!-- Step 5 input fields -->
+            <div class="mt-3">{% include 'home/6_activities.html' %}</div>
+          </section>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
 <!-- [ Main Content ] end -->
 

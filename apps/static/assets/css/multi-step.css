@@ -18,13 +18,14 @@
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    text-align: right;
+    float: right;
   }
-  .button2{
+  .button2 {
     padding: 0.7rem 1.5rem;
     border-radius: 5px;
     text-align: right;
     float: right;
-
   }
   .submit-btn {
     border: 1px solid #0e9594;
