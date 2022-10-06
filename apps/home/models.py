@@ -6,9 +6,9 @@ import uuid
 class CMPAChecklist(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
     location = models.CharField(max_length=30)
-    supportNeeded = models.CharField(max_length=30)
-    bandPMA = models.IntegerField
-    bandPMO = models.IntegerField
+    support = models.CharField(max_length=30)
+    band_pma = models.IntegerField(default=0, null=True, blank=True)
+    band_pmo = models.IntegerField(default=0, null=True, blank=True)
     
     
     def __str__(self):

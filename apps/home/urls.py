@@ -5,8 +5,7 @@ urlpatterns = [
 
     # The home page
     path('', views.index, name='home'),
-    path('save_request', views.save_request, name='save_request'),
-    
+    path('save_request/', views.save_request, name='save_request'),
 
 
     # Matches any html file

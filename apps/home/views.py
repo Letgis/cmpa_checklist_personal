@@ -43,5 +43,12 @@ def pages(request):
 
 
 def save_request(request):
-    print(request.POST)
-    return render(request, "home/create-request.html")
+    if request.method == 'POST':
+        context = {}
+        location = request.POST.get('location', None)
+        support = request.POST.get('support', None)
+        band_pma = request.POST.get('band_pma', None)
+        band_pmo = request.POST.get('band_pmo', None)
+        ippf = request.POST.get('ippf', None)
+        print(location, support, band_pma, band_pmo, ippf)
+    return render(request, 'home/finish.html', context=context)
