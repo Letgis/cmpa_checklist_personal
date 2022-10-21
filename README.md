@@ -4,7 +4,7 @@
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/django-datta-able.git
+$ git clone https://github.ibm.com/letgis/cmpa_checklist.git
 $ cd django-datta-able
 ```
 

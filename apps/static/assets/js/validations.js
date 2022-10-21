@@ -58,3 +58,10 @@ function createOptions(data) {
   });
 }
 
+function validatefields1() {
+  let x = document.forms["checklistForm"]["user_name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}

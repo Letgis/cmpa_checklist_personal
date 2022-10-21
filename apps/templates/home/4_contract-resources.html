@@ -10,102 +10,40 @@
           <div class="col-sm-12">
             <div class="card">
               <div class="card-header">
-                <h5>Contract Information</h5>
+                <h5>Contract Resources</h5>
               </div>
               <div class="card-body">
                 <div class="row">
-                  <div class="col-md-6">
-                    <form>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Checklist Number</label>
-                        <input type="text" class="form-control" id=
-                        checklistNumberContractInfo" placeholder="123456"
-                        disabled>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Country</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputCountryDisabled"
-                          placeholder="Selected Country"
-                          disabled
-                        />
-                      </div>
-                    </form>
+                  <div class="col-md-4 container">
+                    <div class="form-group">
+                      <label for="numberLocalId">Number of Local IBMer's (Onshore)</label>
+                      <input type="text" class="form-control" id="numberLocalId" name="number_local"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="numberIcaId">Number of ICA resources (Offshore)</label>
+                      <input type="text" class="form-control" id="numberIcaId" name="number_ica"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="numberSubId">Number of SubK's</label>
+                      <input type="text" class="form-control" id="numberSubId" name="number_sub"/>
+                    </div>
                   </div>
-                  <div class="col-md-6"></div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="col-md-6">
-                    <form>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1"
-                          >Number of Local IBMer's (Onshore)</label
-                        >
-                        <input type="text" class="form-control" id=
-                        checklistNumberContractInfo">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1"
-                          >Number of ICA resources (Offshore)</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputCountryDisabled"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Number of SubK's</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputCountryDisabled"
-                        />
-                      </div>
-                    </form>
-                  </div>
-                  <div class="col-md-6"></div>
                 </div>
 
-                <h4 class="mt-5">Total</h4>
+                <h5 class="mt-5">Total</h5>
                 <hr />
                 <div class="row">
-                  <div class="col-md-3">
-                    <form>
-                      <div class="form-group">
-                        <input type="text" class="form-control" id=
-                        checklistNumberContractInfo">
-                        <small id="emailHelp" class="form-text text-muted"
-                          >Number of Local IBMer's + Number of ICA resources +
-                          Number of SubK's</small
-                        >
-                      </div>
-                    </form>
+                  <div class="col-md-3 container">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="totalId" name="total" disabled>
+                      <small id="obs6" class="form-text text-muted">Number of Local IBMer's + Number of ICA resources + Number of SubK's</small>
+                    </div>
                   </div>
                 </div>
                 <div class="mt-3">
-                  <button
-                    class="button btn-navigate-form-step"
-                    type="button"
-                    step_number="5"
-                  >
-                    Next
-                  </button>
-                  <button
-                    class="button btn-navigate-form-step"
-                    type="button"
-                    step_number="3"
-                  >
-                    Prev
-                  </button>
-                  <button class="button2 btn btn-outline-primary" type="submit">
-                    Save
-                  </button>
+                  <button class="button btn-navigate-form-step" type="button" step_number="5">Next</button>
+                  <button class="btn btn-outline-primary btn-navigate-form-step" type="button" step_number="3">Prev</button>
                 </div>
-    
               </div>
             </div>
           </div>

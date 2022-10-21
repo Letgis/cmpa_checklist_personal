@@ -26,8 +26,15 @@
                                         <div class="card-block">
                                             <h6 class="mb-4">Daily Sales</h6>
                                             <div class="row d-flex align-items-center">
+                                                
                                                 <form>
                                                     <button type="button" class="btn btn-outline-primary" title="btn btn-outline-primary" data-toggle="tooltip">Primary</button>
+                                                    
+                                                    {% for checklist in view_checklist.all %}
+                                                        <span>oi {{ checklist.user_name }}</span>
+                                                    {% endfor %}<span></span>
+                                                    
+                                                    <span>oi {{ checklist.user_name }}</span>
                                                 </form>
                                             </div>
                                         </div>

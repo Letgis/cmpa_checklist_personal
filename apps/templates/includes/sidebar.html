@@ -1,5 +1,5 @@
 <!-- [ navigation menu ] start -->
-<nav class="pcoded-navbar">
+<nav class="pcoded-navbar navbar-collapsed">
     <div class="navbar-wrapper">
         <div class="navbar-brand header-logo">
             <a href="/" class="b-brand">
@@ -14,15 +14,17 @@
                 <li class="nav-item pcoded-menu-caption">
                     <label>Navigation</label>
                 </li>
-                <li 
-                    class="nav-item {% if 'index' in segment %} active {% endif %}">
-                    <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span
+
+                {% if request.user.is_superuser %}
+                <li class="nav-item {% if 'index' in segment %} active {% endif %}">
+                    <a href="/index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span
                             class="pcoded-mtext">Dashboard</span></a>
                 <li class="nav-item pcoded-menu-caption">
                     <label>Checklist</label>
                 </li>
-                <li 
-                    class="nav-item {% if 'create-request' in segment %} active {% endif %}">
+                {% endif %}
+
+                <li class="nav-item {% if 'create-request' in segment %} active {% endif %}">
                     <a href="/create-request.html" class="nav-link ">
                         <span class="pcoded-micon">
                             <i class="feather icon-file-text"></i>
@@ -42,7 +44,7 @@
                 </li>
 
                 <li data-username="Support Page" class="nav-item ">
-                    <a target="_blank" href="https://appseed.us/support" class="nav-link">
+                    <a href="/support.html" class="nav-link">
                         <span class="pcoded-micon">
                             <i class="feather icon-headphones"></i>
                         </span>
