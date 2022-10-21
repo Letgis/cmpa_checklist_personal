@@ -5,7 +5,7 @@
 ```bash
 $ # Get the code
 $ git clone https://github.ibm.com/letgis/cmpa_checklist.git
-$ cd django-datta-able
+$ cd cmpa_checklist
 ```
 
 <br />
