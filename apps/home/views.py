@@ -61,6 +61,7 @@ def save_request(request):
         #annual_tcv = request.POST.get('annual_tcv', None)
         total_invoices = request.POST.get('total_invoices', None)
         billing_window = request.POST.get('billing_window', None)
+        
         number_local = request.POST.get('number_local', None)
         number_ica = request.POST.get('number_ica', None)
         number_sub = request.POST.get('number_sub', None)
@@ -88,8 +89,5 @@ def save_request(request):
 
 def show_checklist(request):
     view_checklist = CMPAChecklist.objects.all()
-    context = {
-        "view_checklist":view_checklist
-    }
-    return render(request, 'home/index.html', context)
+    return render(request, 'home/index.html', {"view_checklist":view_checklist})
     

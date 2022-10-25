@@ -80,21 +80,25 @@
                   </div>
                 </div>
 
-                <h4 class="mt-5">Annual TCV ($M)</h4>
+                <h5 class="mt-5">Annual TCV ($M)</h5>
                 <hr />
-                <div class="row">
-                  <div class="col-md-6 container">
+                <div class="row ">
+                  <div class="col-md-3 container">
                     <div class="form-group">
-                      <input type="text" class="form-control" id="annualTcvId" name="annual_tcv" disabled/>
-                      <small id="obs5" class="form-text text-muted">Contract TCV / (Contract Length/Contract TCV)</small>
+                      <div class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2 box-outer" id="result2">
+                          Result
+                        </div>
+                        <button type="button" class="btn btn-primary mb-2" id="buttonResult2">Caculate</button>
+                        <small id="obs5" class="form-text text-muted">Contract TCV / (Contract Length/Contract TCV)</small>
+                      </div>
                     </div>
                   </div>
-                    <div class="col-md-6">  
-                      <div class="mt-3">
-                        <button class="button btn-navigate-form-step" type="button" step_number="3">Next</button>
-                        <button class="btn btn-outline-primary btn-navigate-form-step" type="button" step_number="1">Prev</button>
-                     </div>
-                  </div>
+                </div>
+                <div class="mt-3">
+                  <button class="button btn-navigate-form-step" type="button" step_number="3">Next</button>
+                  <button class="btn btn-outline-primary btn-navigate-form-step" type="button" step_number="1">Prev</button>
+                </div>
                 </div>
               </div>
             </div>
@@ -103,6 +107,19 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.getElementById("buttonResult2").onclick = function () {
+      var tcv = parseFloat(document.getElementById("contractTcvId").value);
+      var length = parseFloat(document.getElementById("contractLengthId").value);
+      var type = parseFloat(document.getElementById("contractTypeId").value);
+      
+      var total = tcv / (length / type);
+    
+      document.getElementById("result2").innerHTML = total;
+    
+    }
+  </script>    
 
   {% endblock content %}
 

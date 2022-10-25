@@ -1,3 +1,5 @@
+//******* PMA/PMO Select *****/
+
 function enablePmaPmo(answer) {
     console.log(answer.value);
     if (answer.value == "pma" ){
@@ -14,6 +16,10 @@ function enablePmaPmo(answer) {
     }
 
 }
+
+
+
+//******* Country Select *****/
 
 // Set up an array of countries, and an object with those
 // countries as keys - their values will be whatever you want
@@ -44,6 +50,7 @@ function handleChange(e) {
 // Update the second select with the values from
 // the dictionary
 function updatebandPmaSelect(value) {
+  bandPmaSelect = undefined;
   bandPmaSelect.innerHTML = createOptions(options[value][0]);
   bandPmoSelect.innerHTML = createOptions(options[value][1]);
 }
@@ -58,6 +65,10 @@ function createOptions(data) {
   });
 }
 
+
+
+//******* Fields Validation *****/
+
 function validatefields1() {
   let x = document.forms["checklistForm"]["user_name"].value;
   if (x == "") {
@@ -65,3 +76,5 @@ function validatefields1() {
     return false;
   }
 }
+
+

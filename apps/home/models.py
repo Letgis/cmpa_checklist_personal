@@ -20,6 +20,7 @@ class CMPAChecklist(models.Model):
     annual_tcv = models.CharField(max_length=50, default='', blank=True)
     total_invoices = models.CharField(max_length=200, default='', blank=True)
     billing_window = models.CharField(max_length=50, default='', blank=True)
+    billing_type = models.CharField(max_length=50, default='', blank=True)
     number_local = models.CharField(max_length=200, default='', blank=True)
     number_ica = models.CharField(max_length=200, default='', blank=True)
     number_sub = models.CharField(max_length=200, default='', blank=True)

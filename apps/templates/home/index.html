@@ -10,12 +10,8 @@
     <!-- [ Main Content ] start -->
     <div class="pcoded-main-container">
         <div class="pcoded-wrapper">
-
             <div class="pcoded-content">
                 <div class="pcoded-inner-content">
-                    <!-- [ breadcrumb ] start -->
-
-                    <!-- [ breadcrumb ] end -->
                     <div class="main-body">
                         <div class="page-wrapper">
                             <!-- [ Main Content ] start -->
@@ -26,15 +22,14 @@
                                         <div class="card-block">
                                             <h6 class="mb-4">Daily Sales</h6>
                                             <div class="row d-flex align-items-center">
-                                                
                                                 <form>
                                                     <button type="button" class="btn btn-outline-primary" title="btn btn-outline-primary" data-toggle="tooltip">Primary</button>
                                                     
                                                     {% for checklist in view_checklist.all %}
                                                         <span>oi {{ checklist.user_name }}</span>
-                                                    {% endfor %}<span></span>
+                                                    {% endfor %}
                                                     
-                                                    <span>oi {{ checklist.user_name }}</span>
+                                                    <span>oi {{ view_checklist }}</span>
                                                 </form>
                                             </div>
                                         </div>
@@ -50,7 +45,7 @@
                                                 <div class="col-9">
                                                     <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i
                                                             class="feather icon-arrow-down text-c-red f-30 m-r-10"></i>$
-                                                        2.942.32</h3>
+                                                            {{ user_name }}</h3>
                                                 </div>
                                                 <div class="col-3 text-right">
                                                     <p class="m-b-0">36%</p>

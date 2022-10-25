@@ -34,9 +34,12 @@
                 <hr />
                 <div class="row">
                   <div class="col-md-3 container">
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="totalId" name="total" disabled>
-                      <small id="obs6" class="form-text text-muted">Number of Local IBMer's + Number of ICA resources + Number of SubK's</small>
+                    <div class="form-inline">
+                      <div class="form-group mx-sm-3 mb-2 box-outer" id="result4">
+                        Result
+                      </div>
+                      <button type="button" class="btn btn-primary mb-2" id="buttonResult4">Caculate</button>
+                      <small class="form-text text-muted" id="obs6">Number of Local IBMer's + Number of ICA resources + Number of SubK's</small>
                     </div>
                   </div>
                 </div>
@@ -48,13 +51,22 @@
             </div>
           </div>
         </div>
-        <!-- [ Main Content ] end -->
       </div>
     </div>
   </div>
 
-  <!-- [ Main Content ] end -->
-
+  <script>
+    document.getElementById("buttonResult4").onclick = function () {
+      var local = parseFloat(document.getElementById("numberLocalId").value);
+      var ica = parseFloat(document.getElementById("numberIcaId").value);
+      var subks = parseFloat(document.getElementById("numberSubId").value);
+      
+      var total = local + ica + subks;
+    
+      document.getElementById("result4").innerHTML = total;
+    }
+  </script>
+  
   {% endblock content %}
 
   <!-- Specific Page JS goes HERE  -->

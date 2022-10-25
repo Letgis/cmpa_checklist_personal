@@ -9,7 +9,17 @@
 
 .attention{
     color:red;
-  }
+}
+
+.box-outer {
+    margin: 20px 0; 
+    padding: 50px;
+    font-size: 14px;
+    border: 1px solid rgb(104, 103, 103);
+    align-items: center;
+    justify-content: center;
+
+}
 
 th, td {
     padding-top: 10px;
