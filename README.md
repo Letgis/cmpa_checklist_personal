@@ -5,7 +5,7 @@
 ```bash
 $ # Get the code
 $ git clone https://github.ibm.com/letgis/cmpa_checklist.git
-$ cd cmpa_checklist
+$ cd django-datta-able
 ```
 
 <br />
@@ -49,9 +49,8 @@ Visit `http://localhost:5085` in your browser. The app should be up & running.
 
 ```bash
 $ # Get the code
-$ git clone https://github.ibm.com/letgis/cmpa_checklist.git
-$ cd cmpa_checklist
-
+$ git clone https://github.com/app-generator/django-datta-able.git
+$ cd django-datta-able
 ```
 
 <br />
