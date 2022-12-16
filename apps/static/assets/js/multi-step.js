@@ -2,7 +2,7 @@
  * Define a function to navigate betweens form steps.
  * It accepts one parameter. That is - step number.
  */
- const navigateToFormStep = (stepNumber) => {
+const navigateToFormStep = (stepNumber) => {
     /**
      * Hide all form steps.
      */

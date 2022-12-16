@@ -1,17 +1,5 @@
 @charset "UTF-8";
-/*!
-=========================================================
-* LeadMark Landing page
-=========================================================
 
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 :root {
   --blue: #007bff;
@@ -116,6 +104,7 @@ ul,
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  list-style-type: none;
 }
 
 ol ol,
@@ -123,6 +112,7 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
+  list-style-type: none;
 }
 
 dt {
@@ -2997,8 +2987,8 @@ fieldset:disabled a.btn {
 .btn-outline-primary {
   color: #ff6e42;
   border-color: #ff6e42;
-  font-size: 16px;
-  padding: 12px 28px;
+  font-size: 20px;
+  padding: 0.8rem 1.5rem;
   border-radius: 5px;
   cursor: pointer;
   text-align: right;
@@ -3035,8 +3025,8 @@ fieldset:disabled a.btn {
 .btn-outline-secondary {
   color: #6c757d;
   border-color: #6c757d;
-  font-size: 16px;
-  padding: 12px 28px;
+  font-size: 20px;
+  padding: 0.8rem 1.5rem;
   border-radius: 5px;
   cursor: pointer;
   text-align: right;
@@ -3105,6 +3095,13 @@ fieldset:disabled a.btn {
 .btn-outline-info {
   color: #1289A7;
   border-color: #1289A7;
+  font-size: 20px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: right;
+  float: right;
+
 }
 
 .btn-outline-info:hover {
@@ -11397,7 +11394,7 @@ textarea.form-control {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/header.jpg) no-repeat center center fixed;
+  background: url(../images/header.jpeg) no-repeat center center fixed;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11511,7 +11508,7 @@ textarea.form-control {
 }
 
 .section:nth-child(even) {
-  background: #f5f8fc;
+  background: #fff;
 }
 
 .section .section-devider {

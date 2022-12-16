@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM registry.access.redhat.com/ubi8/python-38
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1

@@ -24,21 +24,21 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>#VALUE!</td>
-                        <td>#VALUE!</td>
-                        <td>#VALUE!</td>
+                        <td id="week1">#VALUE!</td>
+                        <td id="month1">#VALUE!</td>
+                        <td id="total1">#VALUE!</td>
                         <td>PMA</td>
                       </tr>
                       <tr>
-                        <td>#VALUE!</td>
-                        <td>#VALUE!</td>
-                        <td>#VALUE!</td>
+                        <td id="week2">#VALUE!</td>
+                        <td id="month2">#VALUE!</td>
+                        <td id="total2">#VALUE!</td>
                         <td>PMO</td>
                       </tr>
                       <tr>
-                        <td>#VALUE!</td>
-                        <td>#VALUE!</td>
-                        <td>#VALUE!</td>
+                        <td id="week3">#VALUE!</td>
+                        <td id="month3">#VALUE!</td>
+                        <td id="total3">#VALUE!</td>
                         <td>Total</td>
                       </tr>
                     </tbody>
@@ -53,12 +53,46 @@
           <button class="button btn-navigate-form-step" type="button" step_number="6">Next</button>
           <button class="btn btn-outline-primary btn-navigate-form-step" type="button" step_number="4">Prev</button>
           <button class="btn btn-outline-secondary" type="submit" onclick="window.print()">Print</button>
+          <button class="btn btn-outline-info" type="button" id="btnResult5">Calculate</button>
         </div>
 
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  document.getElementById("btnResult5").onclick = function () {
+
+    var week1 = 1; //parseFloat(document.getElementById("result4").value);???????????????????
+    document.getElementById("week1").innerHTML = week1;
+
+    var week2 = week1 * 3;
+    document.getElementById("week2").innerHTML = week2;
+
+    var week3 = week1 + week2;
+    document.getElementById("week3").innerHTML = week3;
+
+    var month1 = week1 * 4.6;
+    document.getElementById("month1").innerHTML = month1;
+
+    var month2 = week2 * 4.6;
+    document.getElementById("month2").innerHTML = month2;
+
+    var month3 = month1 + month2;
+    document.getElementById("month3").innerHTML = month3;
+
+    var total1 = week1 * month1;
+    document.getElementById("total1").innerHTML = total1;
+
+    var total2 = week1 * month2;
+    document.getElementById("total2").innerHTML = total2;
+
+    var total3 = total1 + total2; 
+    document.getElementById("total3").innerHTML = total3;
+
+  }
+</script>
 
 {% endblock content %}
 

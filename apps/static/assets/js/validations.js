@@ -50,7 +50,6 @@ function handleChange(e) {
 // Update the second select with the values from
 // the dictionary
 function updatebandPmaSelect(value) {
-  bandPmaSelect = undefined;
   bandPmaSelect.innerHTML = createOptions(options[value][0]);
   bandPmoSelect.innerHTML = createOptions(options[value][1]);
 }
@@ -69,12 +68,15 @@ function createOptions(data) {
 
 //******* Fields Validation *****/
 
-function validatefields1() {
-  let x = document.forms["checklistForm"]["user_name"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
+// function validatefields1() {
+//   let x = document.forms["checklistForm"]["user_name"].value;
+//   if (x == "") {
+//     alert("Name must be filled out");
+//     return false;
+//   } else{
+    
+//   }
+// }
+
 
 

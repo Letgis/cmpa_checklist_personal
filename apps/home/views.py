@@ -7,9 +7,8 @@ from django.shortcuts import render
 from .models import CMPAChecklist
 
 
-
 @login_required(login_url="/login/")
-def index(request):
+def homepage(request):
     context = {'segment': 'index'}
 
     html_template = loader.get_template('home/homepage.html')
@@ -17,7 +16,16 @@ def index(request):
 
 
 @login_required(login_url="/login/")
+def index(request):
+    context = {'segment': 'index'}
+    print(request)
+    html_template = loader.get_template('home/index.html')
+    return HttpResponse(html_template.render(context, request))
+
+
+@login_required(login_url="/login/")
 def pages(request):
+    print(request)
     context = {}
     # All resource paths end in .html.
     # Pick out the html file name from the url. And load that template.
@@ -61,12 +69,12 @@ def save_request(request):
         #annual_tcv = request.POST.get('annual_tcv', None)
         total_invoices = request.POST.get('total_invoices', None)
         billing_window = request.POST.get('billing_window', None)
-        
+
         number_local = request.POST.get('number_local', None)
         number_ica = request.POST.get('number_ica', None)
         number_sub = request.POST.get('number_sub', None)
-        
-        checklist = CMPAChecklist(user_name=user_name, location=location, support=support,band_pma=band_pma,
+
+        checklist = CMPAChecklist(user_name=user_name, location=location, support=support, band_pma=band_pma,
                                   band_pmo=band_pmo, project_code=project_code, ippf=ippf,
                                   deferral=deferral, customer_name=customer_name,
                                   contract_tcv=contract_tcv, contract_length=contract_length,
@@ -75,12 +83,12 @@ def save_request(request):
                                   number_local=number_local, number_ica=number_ica,
                                   number_sub=number_sub)
         checklist.save()
-        
+
         print(location, support, band_pma, band_pmo, project_code, ippf,
               deferral, customer_name, contract_tcv, contract_length,
               contract_type, total_invoices, billing_window,
               number_local, number_ica, number_sub)
-        
+
         return render(request, 'home/finish.html', context=context)
 
     else:
@@ -89,5 +97,4 @@ def save_request(request):
 
 def show_checklist(request):
     view_checklist = CMPAChecklist.objects.all()
-    return render(request, 'home/index.html', {"view_checklist":view_checklist})
-    
+    return render(request, 'home/index.html', {"view_checklist": view_checklist})
